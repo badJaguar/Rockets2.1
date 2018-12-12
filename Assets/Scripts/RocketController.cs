@@ -35,20 +35,20 @@ public class RocketController : MonoBehaviour
         //}
         if (Input.GetAxis("Mouse X") < 0 && jetpackActive)
         {
-            player.AddForce(new Vector2(-moveSpeed, 0));
-            //player.transform.localPosition += Vector3.left * Time.deltaTime * moveSpeed;
-            //player.transform.position += new Vector3(Input.GetAxis("Mouse X") * Time.deltaTime * moveSpeed, 0.0f);
-            //transform.Rotate(0, 0, -(Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+            player.AddForce(new Vector2(-moveSpeed, 0)); //1-st variant
+            //player.transform.localPosition += Vector3.left * Time.deltaTime * moveSpeed; // 2-nd variant
+            //player.transform.position += new Vector3(Input.GetAxis("Mouse X") * Time.deltaTime * moveSpeed, 0.0f); //3-rd variant
+            //transform.Rotate(0, 0, -(Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed); //rotation
 
         }
 
         if (Input.GetAxis("Mouse X") > 0 && jetpackActive)
         {
-            player.AddForce(new Vector2(moveSpeed, 0));
-            //player.transform.localPosition += Vector3.right * Time.deltaTime * moveSpeed;
+            player.AddForce(new Vector2(moveSpeed, 0)); //1-st variant
+            //player.transform.localPosition += Vector3.right * Time.deltaTime * moveSpeed; // 2-nd variant
 
-            //player.transform.position += new Vector3(Input.GetAxis("Mouse X") * Time.deltaTime * moveSpeed, 0.0f);
-            //transform.Rotate(0, 0, -(Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed);
+            //player.transform.position += new Vector3(Input.GetAxis("Mouse X") * Time.deltaTime * moveSpeed, 0.0f); //3-rd variant
+            //transform.Rotate(0, 0, -(Input.GetAxis("Mouse X")) * Time.deltaTime * rotateSpeed); //rotation
         }
         else if (!jetpackActive)
         {
